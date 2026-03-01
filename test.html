@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <title>Testing</title>
+    <body>
+        <form>
+        First number <input id="first" type="number" style = "text-align: center;"><br>
+        Second number <input id="second" type="number" style="text-align: center;"><br>
+        </form>
+        <button type="button" onclick="Tester()" style = "text-align: center;">Click me</button>
+        <p id="p1"></p>
+        <a id="nice" href="https://media.tenor.com/0rKL5dtMPkgAAAAe/monkey.png" target="_blank"></a>
+        <script>
+            function Tester(){
+                const message = document.getElementById("p1")
+                message.innerHTML = "";
+                let x = document.getElementById("first").value
+                let y = document.getElementById("second").value
+                try{
+                    if(x.trim() == "") throw x + "is empty";
+                    if(y.trim() == "" ) throw y + "is empty";
+                    if(isNaN(x)) throw "Nigg" + x;
+                    if(isNaN(x)) throw "Nigg" + y;
+                    x = Number(x);
+                    y = Number(y);
+                    corrected(x, y);
+                }
+                catch(err){
+                    message.style.color = "red";
+                    message.innerHTML = "Nigger input is " + err;
+                }
+            }
+            function corrected(x, y){
+                const message = document.getElementById("p1")
+                if (x > y){
+                    message.innerHTML = x + " is higher than " + y;
+
+                }
+                if (x < y){
+                    message.innerHTML = x + " is smaller than " + y;
+                }
+                const link = document.getElementById("nice");
+                message.style.color = "black";
+                link.innerHTML = "nice"
+            }
+        </script>
+    </body>
+</html>
