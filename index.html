@@ -1,47 +1,85 @@
 <!DOCTYPE html>
-<html>
-    <title>Testing</title>
-    <body>
-        <form>
-        First number <input id="first" type="number" style = "text-align: center;"><br>
-        Second number <input id="second" type="number" style="text-align: center;"><br>
-        </form>
-        <button type="button" onclick="Tester()" style = "text-align: center;">Click me</button>
-        <p id="p1"></p>
-        <a id="nice" href="https://media.tenor.com/0rKL5dtMPkgAAAAe/monkey.png" target="_blank"></a>
-        <script>
-            function Tester(){
-                const message = document.getElementById("p1")
-                message.innerHTML = "";
-                let x = document.getElementById("first").value
-                let y = document.getElementById("second").value
-                try{
-                    if(x.trim() == "") throw x + "is empty";
-                    if(y.trim() == "" ) throw y + "is empty";
-                    if(isNaN(x)) throw "Nigg" + x;
-                    if(isNaN(x)) throw "Nigg" + y;
-                    x = Number(x);
-                    y = Number(y);
-                    corrected(x, y);
-                }
-                catch(err){
-                    message.style.color = "red";
-                    message.innerHTML = "Nigger input is " + err;
-                }
-            }
-            function corrected(x, y){
-                const message = document.getElementById("p1")
-                if (x > y){
-                    message.innerHTML = x + " is higher than " + y;
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sujet de Réflexion - Covoiturage</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .instruction {
+            font-style: italic;
+            margin-bottom: 30px;
+            color: #555;
+            border-left: 4px solid #ccc;
+            padding-left: 15px;
+        }
+        .subject-box {
+            border: 1px solid #000;
+            padding: 30px;
+            margin-top: 20px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+        h2 {
+            text-align: center;
+            font-size: 1.4rem;
+            margin-top: 0;
+            margin-bottom: 25px;
+            color: #000;
+        }
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        .questions {
+            margin-top: 25px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
 
-                }
-                if (x < y){
-                    message.innerHTML = x + " is smaller than " + y;
-                }
-                const link = document.getElementById("nice");
-                message.style.color = "black";
-                link.innerHTML = "nice"
-            }
-        </script>
-    </body>
+<div class="container">
+    <div class="instruction">
+        <p>Vous dégagez le problème soulevé par le document ci-dessous.</p>
+        <p>Vous présentez votre opinion sur le sujet de manière argumentée et vous la défendez si nécessaire :</p>
+    </div>
+
+    <div class="subject-box">
+        <h1>Sujet 9</h1>
+        <h2>Le covoiturage sur courte distance est-il une solution efficace pour la mobilité quotidienne ?</h2>
+
+        <p>
+            Avec l’augmentation du prix des carburants et les préoccupations écologiques, le covoiturage sur courte distance se développe de plus en plus. Partager un trajet pour aller au travail, à l’université ou même pour faire ses courses permet de réduire les embouteillages, les émissions de CO<sub>2</sub> et les frais de transport.
+        </p>
+
+        <p>
+            Cependant, malgré ses avantages, ce mode de transport reste encore peu utilisé au quotidien. Le manque de flexibilité des horaires, l'organisation compliquée et la préférence pour l'indépendance freinent son adoption. De plus, les transports en commun ou le vélo sont parfois considérés comme des alternatives plus pratiques et écologiques.
+        </p>
+
+        <p class="questions">
+            Faut-il encourager davantage le covoiturage de proximité ? Comment le rendre plus attractif et accessible à tous ? Qu’en pensez-vous ?
+        </p>
+    </div>
+</div>
+
+</body>
 </html>
